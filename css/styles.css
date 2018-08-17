@@ -10,11 +10,17 @@ body {
 }
 
 #output {
-  font-size: 100px;
+  font-size: 50px;
   color: red;
+
 }
 
 h1 {
   text-align: center;
 
+}
+
+h3 {
+  color: white;
+    text-shadow: 2px 2px 4px;
 }
