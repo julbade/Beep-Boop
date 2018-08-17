@@ -35,7 +35,7 @@ Numbers that contain a 0 are replaced (all digits) with "Beep!" Numbers that con
 
 ## Setup/Installation Requirements:
 
-* Clone this repository
+* Clone this repository https://github.com/julbade/Beep-Boop
 * Open index.html file
 * Will run with any web browser
 
