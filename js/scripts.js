@@ -1,28 +1,33 @@
-// Back End
-var convert = function(num) {
+var beepConverter = function(number){
+   if (isNaN(number)) {
+    return output = 1;
+  }
+      else if (number % 30 === 0) {
+        return output=2;
+    }
 
-  // Arrays with their Matching Values
-  var numberValue = [ '1000', '900', '500', '400', '100', '99', '90', '50', '40', '10', '9', '5', '4', '1' ];
-  var romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XCIX', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
-  var romanChanger = '';
-
-    // Loop through the indices of the number Value array.
-    for (var index = 0; index < numberValue.length; index++) {
-      while (+numberValue[index] <= num) {
-        romanChanger += romanNumeral[index];
-        num -= numberValue[index];
+      else {
+      alert("Beep");
     }
   }
-  return romanChanger;
-};
 
-//Front End
+
+
+
+
 $(document).ready(function() {
-  $("form#romanized").submit(function(event) {
-    event.preventDefault();
-    // var numeral = parseInt($("input#numeral").val());
-    var result = $("#enternum").val();
-       $("#result").text(convert(result));
-       $("#result").show();
-     });
-   });
+$("form#beep").submit(function(event) {
+  event.preventDefault();
+
+  var number = $("input#enternumber").val();
+
+  var output = beepConverter(number);
+  if (output === 1) {
+    output = "Please Enter A Number"
+  } else if (output === 2){
+    output = "I'm sorry, Dave. I'm afraid I can't do that."
+  }
+  $("#result").text(output);
+  $("#result").show();
+});
+});
