@@ -1,33 +1,26 @@
-var beepConverter = function(number){
-   if (isNaN(number)) {
-    return output = 1;
-  }
-      else if (number % 30 === 0) {
-        return output=2;
-    }
+//business logic
 
-      else {
-      alert("Beep");
-    }
-  }
+var beepConverter = function(number) {
+  var result = [];
 
+  if (number < 0) {
+    return "Please enter a higher number"
+  } else if (number % 10 === 0) {
+    return "Beep";
+  } else if (number > 0 &&)
 
+}
 
 
-
+//user-interface
 $(document).ready(function() {
 $("form#beep").submit(function(event) {
   event.preventDefault();
 
-  var number = $("input#enternumber").val();
+  var numberInput = parseInt($("input#enternumber").val());
+  var numverResult = beepConverter(numberInput)
 
-  var output = beepConverter(number);
-  if (output === 1) {
-    output = "Please Enter A Number"
-  } else if (output === 2){
-    output = "I'm sorry, Dave. I'm afraid I can't do that."
-  }
-  $("#result").text(output);
+
   $("#result").show();
 });
 });
