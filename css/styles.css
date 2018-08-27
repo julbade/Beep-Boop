@@ -6,12 +6,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow: auto;
-  min-height: 800px;
+  min-height: 700px;
 }
 
 #output {
-  font-size: 50px;
-  color: red;
+  font-size: 30px;
+  color: white;
 
 }
 
